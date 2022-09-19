@@ -10,3 +10,5 @@ One issue I had is that if a box is sunken into a plane, it does not have the sa
 
 I am reading these tutorials now to better understand swimming and physics involved: https://catlikecoding.com/unity/tutorials/movement/swimming/
 And am interested in reading the rest of them on movement as well: https://catlikecoding.com/unity/tutorials/movement/
+
+This swimming tutorial focuses on the physics of being in water such as drag and buyoncy, as well as challenges of climbing and jumping. It also mentions "water volumes that move in their entirety because they're animated", where there is another body (of water) to manage. It is also possible to add objects to interact with that respond to player in ways that the water would dictate as well. 
