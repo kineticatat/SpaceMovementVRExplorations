@@ -14,3 +14,13 @@ And am interested in reading the rest of them on movement as well: https://catli
 This swimming tutorial focuses on the physics of being in water such as drag and buyoncy, as well as challenges of climbing and jumping. It also mentions "water volumes that move in their entirety because they're animated", where there is another body (of water) to manage. It is also possible to add objects to interact with that respond to player in ways that the water would dictate as well. 
 
 There is this note: "All the water volume objects are on the Water layer, which should be excluded from all layer masks of both the moving sphere and the orbit camera. Even then, in general **the two physics queries that we currently have are meant for regular colliders only, not triggers**. Whether triggers are detected can be configured via the Physics / Queries Hit Triggers project setting. But we never want to detect triggers with the code what we have right now, so let's make that explicit, regardless of the project setting."
+
+
+Sensors: 
+Perception Neuron Mocap:
+I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. I will work on that soon, as well as test my V2 suit. 
+
+MYO Sensor Band EMG:
+https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
+I got the MYO band working through processing, and can get a printout of data: https://github.com/nok/myo-processing
+I found the MYO Connect software here: https://synthiam.com/Support/Skills/Misc/Myo-Gesture-Armband?id=15972
