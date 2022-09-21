@@ -18,7 +18,9 @@ There is this note: "All the water volume objects are on the Water layer, which 
 
 Sensors: 
 Perception Neuron Mocap:
-I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. I will work on that soon, as well as test my V2 suit. 
+I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. 
+The V2 suit works perfectly, is easily plug and play. I am currently working on getting a battery pack to worth so it can be used untethered. 
+Connecting to Unity is pretty easy using this: https://youtu.be/GPPMXcXvxDQ and this: https://support.neuronmocap.com/hc/en-us/articles/1260805842150-Live-Stream-data-into-Unity. I grabbed a basic mannequin from Mixamo and used that as the avatar: https://www.mixamo.com/#/
 
 MYO Sensor Band EMG:
 https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
