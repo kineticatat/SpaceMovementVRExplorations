@@ -28,3 +28,13 @@ https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Tha
 I got the MYO band working through processing, and can get a printout of data: https://github.com/nok/myo-processing
 I found the MYO Connect software here: https://synthiam.com/Support/Skills/Misc/Myo-Gesture-Armband?id=15972
 I can visualize the data in processing, and do a println, but there are 8 lines of data and I'm only seeing 1 line (i) in the println.
+
+Kinect 2:
+Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the adapter comes in the mail. 
+
+For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
+
+For continued Unity + Space/ Volume explorations, I want to work on a few basic concepts first:
+1. Getting basic raycasting on the mocap suit, and putting that inside a volume to see the connections to space
+2. Connecting the mocap suit to the character controller in the water patch to see what it feels like to maneuver the physics there
+3. Spending some time brainstorming different spatial experiences that could be replicated. This might be worth contacting the environmental psychology student again. 
