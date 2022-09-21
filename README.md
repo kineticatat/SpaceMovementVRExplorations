@@ -24,3 +24,4 @@ MYO Sensor Band EMG:
 https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
 I got the MYO band working through processing, and can get a printout of data: https://github.com/nok/myo-processing
 I found the MYO Connect software here: https://synthiam.com/Support/Skills/Misc/Myo-Gesture-Armband?id=15972
+I can visualize the data in processing, and do a println, but there are 8 lines of data and I'm only seeing 1 line (i) in the println.
