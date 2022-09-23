@@ -30,7 +30,9 @@ I found the MYO Connect software here: https://synthiam.com/Support/Skills/Misc/
 I can visualize the data in processing, and do a println, but there are 8 lines of data and I'm only seeing 1 line (i) in the println.
 
 Kinect 2:
-Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the adapter comes in the mail. 
+Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the adapter comes in the mail. I have already written two scripts for popping bubbles with the hands following this tutorial: https://youtu.be/hKDaI_E7rDg
+
+And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
 For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
 
