@@ -35,6 +35,12 @@ Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
 For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
+The perception neuron Axis software has a built in cleanup tools, but also rigging packages such as AutoRigPro for Blender: https://www.blendermarket.com/products/auto-rig-pro
+
+
+BVH conversion software:
+BVH Hacker still seems to be used: https://www.bvhacker.com/
+
 
 For continued Unity + Space/ Volume explorations, I want to work on a few basic concepts first:
 1. Getting basic raycasting on the mocap suit, and putting that inside a volume to see the connections to space
