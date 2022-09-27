@@ -15,6 +15,7 @@ This swimming tutorial focuses on the physics of being in water such as drag and
 
 There is this note: "All the water volume objects are on the Water layer, which should be excluded from all layer masks of both the moving sphere and the orbit camera. Even then, in general **the two physics queries that we currently have are meant for regular colliders only, not triggers**. Whether triggers are detected can be configured via the Physics / Queries Hit Triggers project setting. But we never want to detect triggers with the code what we have right now, so let's make that explicit, regardless of the project setting."
 
+9/27: I now tried creating a terrain with water (AQUAS assets) and got the perception neuron suit to work in it. Though I realized that it does not have a way to propel forward. Thinking about how to make that work still. 
 
 Sensors: 
 Perception Neuron Mocap:
