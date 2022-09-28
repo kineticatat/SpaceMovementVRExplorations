@@ -5,6 +5,7 @@ I am working in Unity 2020.3.31f1 right now (Sept 19, 2022)
 
 This seems to be a focus on volumes and physics. I decided to start with water/ swimming.
 
+9/19:
 I first tried this tutorial: https://youtu.be/K8lOEmdZ78o
 One issue I had is that if a box is sunken into a plane, it does not have the same trigger effect (of being able to walk through it), so the water script never kicked in. 
 
@@ -17,20 +18,26 @@ There is this note: "All the water volume objects are on the Water layer, which 
 
 9/27: I now tried creating a terrain with water (AQUAS assets) and got the perception neuron suit to work in it. Though I realized that it does not have a way to propel forward. Thinking about how to make that work still. 
 
-Sensors: 
+9/28: Thinking about how to propel/ transform position on live mocap data. FPS controllers typically use transform.position. I'm looking through some physics scripts that explore water and use a sphere to move, which appears to use ProjectDirectionOnPlane. In void UpdateConnectionState there is connectedBody.transform.TransformPoint(connectionLocalPosition)-connectionWorldPosition;
+But there are a lot of other positional things happening in the swim script to account for gravity, drag, in water, jumping, etc. that probably affect a simple positional change. 
+
+*Another thought about spatial interactions: often the eyes are used most. If there is a way to use eye location in VR as a spatial parameter, that could be interesting, but I imagine would also be exhausting to always see eyes as a solid object (i.e. if there was a raycast for example). 
+
+<b>Sensors: </b>
 Perception Neuron Mocap:
-I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. 
+9/21: I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. 
 The V2 suit works perfectly, is easily plug and play. I am currently working on getting a battery pack to worth so it can be used untethered. 
 Connecting to Unity is pretty easy using this: https://youtu.be/GPPMXcXvxDQ and this: https://support.neuronmocap.com/hc/en-us/articles/1260805842150-Live-Stream-data-into-Unity. I grabbed a basic mannequin from Mixamo and used that as the avatar: https://www.mixamo.com/#/
 More info on PN's github page here: https://github.com/pnmocap/Neuron_Mocap_Live_Unity
 
 MYO Sensor Band EMG:
 https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
-I got the MYO band working through processing, and can get a printout of data: https://github.com/nok/myo-processing
+9/21: I got the MYO band working through processing, and can get a printout of data: https://github.com/nok/myo-processing
 I found the MYO Connect software here: https://synthiam.com/Support/Skills/Misc/Myo-Gesture-Armband?id=15972
 I can visualize the data in processing, and do a println, but there are 8 lines of data and I'm only seeing 1 line (i) in the println.
 
 Kinect 2:
+9/28:
 Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the adapter comes in the mail. I have already written two scripts for popping bubbles with the hands following this tutorial: https://youtu.be/hKDaI_E7rDg
 
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
