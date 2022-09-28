@@ -23,6 +23,10 @@ But there are a lot of other positional things happening in the swim script to a
 
 *Another thought about spatial interactions: often the eyes are used most. If there is a way to use eye location in VR as a spatial parameter, that could be interesting, but I imagine would also be exhausting to always see eyes as a solid object (i.e. if there was a raycast for example). 
 
+
+Bubbles bubble = collision.gameObject.GetComponent<bubble>();
+        StartCoroutine(bubble.Pop());
+
 <b>Sensors: </b>
 Perception Neuron Mocap:
 9/21: I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. 
