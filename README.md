@@ -45,12 +45,34 @@ Kinect 2:
 I have been working with the Kinect 2 to get this tutorial of popping bubbles with your hands working: https://youtu.be/hKDaI_E7rDg
 However, as of 10/4, I have been struggling to get this tutorial to work. I can just open the Kinect files and see the body moving, but when I went to follow the rest of the tutorials (which are very simple), I have a number of errors. A major one is that the tutorial uses some different classes which seem deprecated, so it worked best if I tried to do the minimum on the original kinect files and just deleted the joints I didn't need (and did not make changes to classes or functions). However I have not gotten the bubbles spawning in different locations yet (need to revisit that code more, I'm sure its a unity version/ legacy issue), or popping the bubbles (possibly because the bubbles are all spawning on top of each other, affecting the collision). 
         
-        I have found a few other resources I am currently diving into to better understand what is happening with the kinect data, but if I don't figure out these other simple things then I might just go back to the PN mocap suit for prototyping. 
+I have found a few other resources I am currently diving into to better understand what is happening with the kinect data, but if I don't figure out these other simple things then I might just go back to the PN mocap suit for prototyping. 
+        
         https://rfilkov.com/2015/01/25/kinect-v2-tips-tricks-examples/comment-page-4/
+        How to get the position of a body joint:
+
+        This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You can add it as a component to a game object in your scene to see it       in action. Just select the needed joint and optionally enable saving to a csv-file. Do not forget that to add the KinectManager as component to a       game object in your scene. It is usually a component of the MainCamera in the example scenes. Here is the main part of the demo-script that retrieves   the position of the selected joint:
+
+        KinectInterop.JointType joint = KinectInterop.JointType.HandRight;
+        KinectManager manager = KinectManager.Instance;
+
+        if(manager && manager.IsInitialized())
+        {
+           if(manager.IsUserDetected())
+           {
+               long userId = manager.GetPrimaryUserID();
+
+               if(manager.IsJointTracked(userId, (int)joint))
+                       {
+                   Vector3 jointPos = manager.GetJointPosition(userId, (int)joint);
+                    // do something with the joint position
+                }
+            }
+        }
         
         https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
         
 
+        
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
 For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
