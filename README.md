@@ -42,7 +42,14 @@ I can visualize the data in processing, and do a println, but there are 8 lines 
 
 Kinect 2:
 9/28:
-Soon I am going to work on getting the Kinect 2 working in Unity, as soon as the adapter comes in the mail. I have already written two scripts for popping bubbles with the hands following this tutorial: https://youtu.be/hKDaI_E7rDg
+I have been working with the Kinect 2 to get this tutorial of popping bubbles with your hands working: https://youtu.be/hKDaI_E7rDg
+However, as of 10/4, I have been struggling to get this tutorial to work. I can just open the Kinect files and see the body moving, but when I went to follow the rest of the tutorials (which are very simple), I have a number of errors. A major one is that the tutorial uses some different classes which seem deprecated, so it worked best if I tried to do the minimum on the original kinect files and just deleted the joints I didn't need (and did not make changes to classes or functions). However I have not gotten the bubbles spawning in different locations yet (need to revisit that code more, I'm sure its a unity version/ legacy issue), or popping the bubbles (possibly because the bubbles are all spawning on top of each other, affecting the collision). 
+        
+        I have found a few other resources I am currently diving into to better understand what is happening with the kinect data, but if I don't figure out these other simple things then I might just go back to the PN mocap suit for prototyping. 
+        https://rfilkov.com/2015/01/25/kinect-v2-tips-tricks-examples/comment-page-4/
+        
+        https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
+        
 
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
