@@ -21,11 +21,9 @@ There is this note: "All the water volume objects are on the Water layer, which 
 9/28: Thinking about how to propel/ transform position on live mocap data. FPS controllers typically use transform.position. I'm looking through some physics scripts that explore water and use a sphere to move, which appears to use ProjectDirectionOnPlane. In void UpdateConnectionState there is connectedBody.transform.TransformPoint(connectionLocalPosition)-connectionWorldPosition;
 But there are a lot of other positional things happening in the swim script to account for gravity, drag, in water, jumping, etc. that probably affect a simple positional change. 
 
-*Another thought about spatial interactions: often the eyes are used most. If there is a way to use eye location in VR as a spatial parameter, that could be interesting, but I imagine would also be exhausting to always see eyes as a solid object (i.e. if there was a raycast for example). 
+*Another thought about spatial interactions: often the eyes are used most. If there is a way to use eye location in VR as a spatial parameter, that could be interesting, but I imagine would also be exhausting to always see eyes as a solid object (i.e. if there was a raycast for example). 10/4: Another thought is that using a slow raycast that bounces back and forth between the eyes and the observed object could be useful, and constant motion of spatial acknowledgement. Also thinking of what body part initiates as a point of spatial "contact" or tangible points. 
 
-
-Bubbles bubble = collision.gameObject.GetComponent<bubble>();
-        StartCoroutine(bubble.Pop());
+10/4: Since the Kinect work is challenging (currently waiting on Unity 5 to open to try and play a demo... not happening), I switched to playing with Raycasting. I followed this tutorial: https://youtu.be/eP4uBtVd68E and added trail renderers to the raycasted objects to see where they travel. I think this could be a useful approach to use and pair with mocap data. To play with this tomorrow...
 
 <b>Sensors: </b>
 Perception Neuron Mocap:
