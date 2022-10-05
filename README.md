@@ -45,10 +45,10 @@ However, as of 10/4, I have been struggling to get this tutorial to work. I can 
         
 I have found a few other resources I am currently diving into to better understand what is happening with the kinect data, but if I don't figure out these other simple things then I might just go back to the PN mocap suit for prototyping. 
         
-        https://rfilkov.com/2015/01/25/kinect-v2-tips-tricks-examples/comment-page-4/
-        How to get the position of a body joint:
+https://rfilkov.com/2015/01/25/kinect-v2-tips-tricks-examples/comment-page-4/
+How to get the position of a body joint:
 
-        This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You can add it as a component to a game object in your scene to see it       in action. Just select the needed joint and optionally enable saving to a csv-file. Do not forget that to add the KinectManager as component to a       game object in your scene. It is usually a component of the MainCamera in the example scenes. Here is the main part of the demo-script that retrieves   the position of the selected joint:
+This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You can add it as a component to a game object in your scene to see it       in action. Just select the needed joint and optionally enable saving to a csv-file. Do not forget that to add the KinectManager as component to a       game object in your scene. It is usually a component of the MainCamera in the example scenes. Here is the main part of the demo-script that retrieves   the position of the selected joint:
 
         KinectInterop.JointType joint = KinectInterop.JointType.HandRight;
         KinectManager manager = KinectManager.Instance;
@@ -67,7 +67,7 @@ I have found a few other resources I am currently diving into to better understa
             }
         }
         
-        https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
+https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
         
 
         
