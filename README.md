@@ -23,7 +23,9 @@ But there are a lot of other positional things happening in the swim script to a
 
 *Another thought about spatial interactions: often the eyes are used most. If there is a way to use eye location in VR as a spatial parameter, that could be interesting, but I imagine would also be exhausting to always see eyes as a solid object (i.e. if there was a raycast for example). 10/4: Another thought is that using a slow raycast that bounces back and forth between the eyes and the observed object could be useful, and constant motion of spatial acknowledgement. Also thinking of what body part initiates as a point of spatial "contact" or tangible points. 
 
-10/4: Since the Kinect work is challenging (currently waiting on Unity 5 to open to try and play a demo... not happening), I switched to playing with Raycasting. I followed this tutorial: https://youtu.be/eP4uBtVd68E and added trail renderers to the raycasted objects to see where they travel. I think this could be a useful approach to use and pair with mocap data. To play with this tomorrow...
+10/4: Since the Kinect work is challenging (currently waiting on Unity 5 to open to try and play a demo... not happening), I switched to playing with Raycasting. I followed this tutorial: https://youtu.be/eP4uBtVd68E and added trail renderers to the raycasted objects to see where they travel. I think this could be a useful approach to use and pair with mocap data. 
+
+11/3: I have been working with raycasting, drawline, and trail renderers. With no motion data I have patches working with raycasting to shoot objects that collide with a mouse position and mouse press, getting distance reported with raycasting and detecting a hit, and using the mouse to draw on the screen. I have been working to attach all these items to the kinect handtracking data, with limited success. I have gotten the raycasting detecting a hit to work, as well as putting trail renderers on the hand prefabs. Next I will work on just adding a line renderer from the hand prefab as an origin, out to world positions for drawing lines. Greg is helping by working on a patch that will dissolve objects using raycasting distance as you get closer. I hope to combine these all to make more progress. I need to do some re-envisioning of the project with the limited progress I have made so far, but I hope it moves much faster as I get a few more pieces in place. 
 
 <b>Sensors: </b>
 Perception Neuron Mocap:
@@ -31,6 +33,8 @@ Perception Neuron Mocap:
 The V2 suit works perfectly, is easily plug and play. I am currently working on getting a battery pack to worth so it can be used untethered. 
 Connecting to Unity is pretty easy using this: https://youtu.be/GPPMXcXvxDQ and this: https://support.neuronmocap.com/hc/en-us/articles/1260805842150-Live-Stream-data-into-Unity. I grabbed a basic mannequin from Mixamo and used that as the avatar: https://www.mixamo.com/#/
 More info on PN's github page here: https://github.com/pnmocap/Neuron_Mocap_Live_Unity
+
+11/3: I have the new socket kit for the PN v1 that I will fix soon. 
 
 MYO Sensor Band EMG:
 https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
@@ -69,7 +73,7 @@ This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You c
         
 https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
         
-
+11/3: I have just ordered the new Kinect Azure in order to have easier/ more reliable tracking data.
         
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
