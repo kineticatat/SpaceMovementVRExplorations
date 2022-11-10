@@ -27,6 +27,8 @@ But there are a lot of other positional things happening in the swim script to a
 
 11/3: I have been working with raycasting, drawline, and trail renderers. With no motion data I have patches working with raycasting to shoot objects that collide with a mouse position and mouse press, getting distance reported with raycasting and detecting a hit, and using the mouse to draw on the screen. I have been working to attach all these items to the kinect handtracking data, with limited success. I have gotten the raycasting detecting a hit to work, as well as putting trail renderers on the hand prefabs. Next I will work on just adding a line renderer from the hand prefab as an origin, out to world positions for drawing lines. Greg is helping by working on a patch that will dissolve objects using raycasting distance as you get closer. I hope to combine these all to make more progress. I need to do some re-envisioning of the project with the limited progress I have made so far, but I hope it moves much faster as I get a few more pieces in place. 
 
+11/10: Greg and I got the azure kinect talking with the swimming in water (+ buouoncy and drag) working together and can now move the avatar both with full body tracking and with keystrokes to change the position. Greg also has been working on some scripts that use raycasting to morph a wall as you get closer to it, and dissolving an object. I think these could both be very interesting for spatial perception work. 
+
 <b>Sensors: </b>
 Perception Neuron Mocap:
 9/21: I got my original Perception Neuron 32 suit working, but it needs a hip socket replacement. 
@@ -73,9 +75,11 @@ This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You c
         
 https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
         
-11/3: I have just ordered the new Kinect Azure in order to have easier/ more reliable tracking data.
         
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
+
+Kinect Azure: This was easy to setup and get working with RF Solution's great Unity demos. There are many great options to work with here such as collisions, rigging, and overlaid objects that will be very helpful to work with. 
+
 
 For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
 The perception neuron Axis software has a built in cleanup tools, but also rigging packages such as AutoRigPro for Blender: https://www.blendermarket.com/products/auto-rig-pro
