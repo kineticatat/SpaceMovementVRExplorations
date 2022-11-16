@@ -27,7 +27,17 @@ But there are a lot of other positional things happening in the swim script to a
 
 11/3: I have been working with raycasting, drawline, and trail renderers. With no motion data I have patches working with raycasting to shoot objects that collide with a mouse position and mouse press, getting distance reported with raycasting and detecting a hit, and using the mouse to draw on the screen. I have been working to attach all these items to the kinect handtracking data, with limited success. I have gotten the raycasting detecting a hit to work, as well as putting trail renderers on the hand prefabs. Next I will work on just adding a line renderer from the hand prefab as an origin, out to world positions for drawing lines. Greg is helping by working on a patch that will dissolve objects using raycasting distance as you get closer. I hope to combine these all to make more progress. I need to do some re-envisioning of the project with the limited progress I have made so far, but I hope it moves much faster as I get a few more pieces in place. 
 
-11/10: Greg and I got the azure kinect talking with the swimming in water (+ buouoncy and drag) working together and can now move the avatar both with full body tracking and with keystrokes to change the position. Greg also has been working on some scripts that use raycasting to morph a wall as you get closer to it, and dissolving an object. I think these could both be very interesting for spatial perception work. 
+11/10: Greg and I got the azure kinect talking with the swimming in water (+ buoyuoncy and drag) working together and can now move the avatar both with full body tracking and with keystrokes to change the position (by adding a parent to the avatar object that has keystroke position transforms). Greg also has been working on some scripts that use raycasting to morph a wall as you get closer to it, and dissolving an object. I think these could both be very interesting for spatial perception work. 
+
+11/16: A list of the semi/functional scenes so far:
+<ul>
+        <i>Motion + water with physics: physics can be unpredictable, harder to control. Needs shader work to get effects of moving through water, rather than just swimming on the surface</i>
+        <i>Motion + overlay objects/ prefabs: to use with raycasting/ elastics/ springs to connect to spatial objects</i>
+        <i>Motion + collider bubbles: used sprites first, but can't see through them in a space so their use needs to be limited. Can still try shader graphs, but for now have a particle system with collision. I would like to write a script to change the seeding/ size/ density based on gestures/ actions.</i>
+        <i>Motion + trampoline: working on putting a physics material on a floor plane</i>
+        <i>Motion + shader deforms: working on Greg's code to dissolve/ deform an object based on proximity</i>
+</ul>
+            
 
 <b>Sensors: </b>
 Perception Neuron Mocap:
@@ -52,33 +62,10 @@ However, as of 10/4, I have been struggling to get this tutorial to work. I can 
 I have found a few other resources I am currently diving into to better understand what is happening with the kinect data, but if I don't figure out these other simple things then I might just go back to the PN mocap suit for prototyping. 
         
 https://rfilkov.com/2015/01/25/kinect-v2-tips-tricks-examples/comment-page-4/
-How to get the position of a body joint:
 
-This is demonstrated in KinectScripts/Samples/GetJointPositionDemo-script. You can add it as a component to a game object in your scene to see it       in action. Just select the needed joint and optionally enable saving to a csv-file. Do not forget that to add the KinectManager as component to a       game object in your scene. It is usually a component of the MainCamera in the example scenes. Here is the main part of the demo-script that retrieves   the position of the selected joint:
-
-        KinectInterop.JointType joint = KinectInterop.JointType.HandRight;
-        KinectManager manager = KinectManager.Instance;
-
-        if(manager && manager.IsInitialized())
-        {
-           if(manager.IsUserDetected())
-           {
-               long userId = manager.GetPrimaryUserID();
-
-               if(manager.IsJointTracked(userId, (int)joint))
-                       {
-                   Vector3 jointPos = manager.GetJointPosition(userId, (int)joint);
-                    // do something with the joint position
-                }
-            }
-        }
-        
-https://nevzatarman.com/2015/07/13/kinect-hand-cursor-for-unity3d/
-        
-        
 And I got the Kinect plugins and unity packages downloaded from here: https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows
 
-Kinect Azure: This was easy to setup and get working with RF Solution's great Unity demos. There are many great options to work with here such as collisions, rigging, and overlaid objects that will be very helpful to work with. 
+Kinect Azure: This was easy to setup and get working with RF Solution's great Unity demos. There are many great options to work with here such as collisions, rigging, and overlaid objects that will be very helpful to work with. aka.ms/kinectdocs
 
 
 For my mocap class I will do some research on cleaning up data soon. This will probably require some BVH conversion software, maybe Motionbuilder. 
@@ -95,32 +82,4 @@ For continued Unity + Space/ Volume explorations, I want to work on a few basic 
 3. Spending some time brainstorming different spatial experiences that could be replicated. This might be worth contacting the environmental psychology student again.
         
         
-        Kinect joints:
-                { Kinect.JointType.FootLeft, Kinect.JointType.AnkleLeft },
-        { Kinect.JointType.AnkleLeft, Kinect.JointType.KneeLeft },
-        { Kinect.JointType.KneeLeft, Kinect.JointType.HipLeft },
-        { Kinect.JointType.HipLeft, Kinect.JointType.SpineBase },
-        
-        { Kinect.JointType.FootRight, Kinect.JointType.AnkleRight },
-        { Kinect.JointType.AnkleRight, Kinect.JointType.KneeRight },
-        { Kinect.JointType.KneeRight, Kinect.JointType.HipRight },
-        { Kinect.JointType.HipRight, Kinect.JointType.SpineBase },
-        
-        { Kinect.JointType.HandTipLeft, Kinect.JointType.HandLeft },
-        { Kinect.JointType.ThumbLeft, Kinect.JointType.HandLeft },
-        { Kinect.JointType.HandLeft, Kinect.JointType.WristLeft },
-        { Kinect.JointType.WristLeft, Kinect.JointType.ElbowLeft },
-        { Kinect.JointType.ElbowLeft, Kinect.JointType.ShoulderLeft },
-        { Kinect.JointType.ShoulderLeft, Kinect.JointType.SpineShoulder },
-        
-        { Kinect.JointType.HandTipRight, Kinect.JointType.HandRight },
-        { Kinect.JointType.ThumbRight, Kinect.JointType.HandRight },
-        { Kinect.JointType.HandRight, Kinect.JointType.WristRight },
-        { Kinect.JointType.WristRight, Kinect.JointType.ElbowRight },
-        { Kinect.JointType.ElbowRight, Kinect.JointType.ShoulderRight },
-        { Kinect.JointType.ShoulderRight, Kinect.JointType.SpineShoulder },
-        
-        { Kinect.JointType.SpineBase, Kinect.JointType.SpineMid },
-        { Kinect.JointType.SpineMid, Kinect.JointType.SpineShoulder },
-        { Kinect.JointType.SpineShoulder, Kinect.JointType.Neck },
-        { Kinect.JointType.Neck, Kinect.JointType.Head },
+   
