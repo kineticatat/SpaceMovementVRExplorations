@@ -31,13 +31,20 @@ But there are a lot of other positional things happening in the swim script to a
 
 11/16: A list of the semi/functional scenes so far:
 <ul>
-        <i>Motion + water with physics: physics can be unpredictable, harder to control. Needs shader work to get effects of moving through water, rather than just swimming on the surface</i>
-        <i>Motion + overlay objects/ prefabs: to use with raycasting/ elastics/ springs to connect to spatial objects</i>
-        <i>Motion + collider bubbles: used sprites first, but can't see through them in a space so their use needs to be limited. Can still try shader graphs, but for now have a particle system with collision. I would like to write a script to change the seeding/ size/ density based on gestures/ actions.</i>
-        <i>Motion + trampoline: working on putting a physics material on a floor plane</i>
-        <i>Motion + shader deforms: working on Greg's code to dissolve/ deform an object based on proximity</i>
+        <li>Motion + water with physics: physics can be unpredictable, harder to control. Needs shader work to get effects of moving through water, rather than just swimming on the surface</li>
+        <li>Motion + overlay objects/ prefabs: to use with raycasting/ elastics/ springs to connect to spatial objects</li>
+        <li>Motion + collider bubbles: used sprites first, but can't see through them in a space so their use needs to be limited. Can still try shader graphs, but for now have a particle system with collision. I would like to write a script to change the seeding/ size/ density based on gestures/ actions.</li>
+        <li>Motion + trampoline: working on putting a physics material on a floor plane</li>
+        <li>Motion + shader deforms: working on Greg's code to dissolve/ deform an object based on proximity</li>
 </ul>
-            
+           
+   Things that seem functional if I have time to explore them:
+   <ul>
+        <li>Azure Kinect in VR: https://vimeo.com/746819465</li>
+        <li>Fun bug character model, though I probably need to rig them: https://sketchfab.com/3d-models/human-bug-466afd96d1ae4d1a8503a9141af0517b</li>
+        <li>Fun scribbly humanoid character model, also probably need to rig: https://sketchfab.com/3d-models/sash-bellydancing-avatar-5d203733e9144faca09ddc2d8508951b</li>
+        </ul>
+           
 
 <b>Sensors: </b>
 Perception Neuron Mocap:
